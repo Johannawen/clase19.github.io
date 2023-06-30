@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+:root {
+--primary-color: #000;
+--secondary-color: #f2f2f2;
+--decoration-color: #c79800;
+}
+
+body {
+background-color: var(--secondary-color);
+font-family: "Roboto";
+color: var(--primary-color);
+width: 100%;
+}
+
+header {
+background-color: var(--primary-color);
+text-align: center;
+z-index: 100;
+}
+header .logo-front {
+margin-top: 20px;
+margin-left: 20px;
+}
+
+nav ul {
+display: flex;
+justify-content: center;
+list-style: none;
+}
+
+nav ul li {
+margin: 20px;
+}
+nav ul li a {
+position: relative;
+margin: 15px;
+font-size: 25px;
+color: var(--secondary-color);
+text-decoration: none;
+}
+
+nav ul li a:before {
+content: "";
+background: var(--decoration-color);
+position: absolute;
+bottom: -10px;
+height: 5px;
+width: 0%;
+transition: 0.25s;
+}
+
+nav ul li a:hover::before {
+width: 100%;
+}
+
+.informacion {
+width: 80%;
+margin: 5% auto;
+}
+
+.informacion p {
+margin-top: 10px;
+text-align: justify;
+}
+
+.informacion a {
+display: inline-block;
+background-color: var(--primary-color);
+color: var(--secondary-color);
+text-decoration: none;
+padding: 15px;
+margin-top: 15px;
+}
+
+.informacion a:hover {
+color: var(--decoration-color);
+}
+
+.redes-sociales {
+position: fixed;
+left: 0;
+top: calc(50% - 90px);
+z-index: 2000;
+}
+
+.redes-sociales ul {
+list-style: none;
+}
+
+.redes-sociales ul li a {
+display: inline-block; 
+color: var(--secondary-color);
+background: var(--primary-color);
+padding: 10px 15px;
+text-decoration: none;
+transition: 0.25s ease-in-out;
+}
+
+.redes-sociales ul li .logo-facebook {
+background: #3b5998;
+} 
+
+.redes-sociales ul li .logo-twitter {
+background: #00abf0;
+}
+.redes-sociales ul li .logo-instagram {
+background: #e4405f;
+}
+.redes-sociales ul li .logo-whatsapp {
+background: #25d366;
+}
+.redes-sociales ul li .logo-mail {
+background: #666666;
+}
+
+.redes-sociales ul li a:hover {
+padding: 10px 30px;
+background-color: #000;
+}
+
+.Rueda-animada {
+width: 64px;
+height: 64px;
+position: fixed;
+top: calc(50% - 32px);
+left: calc(50% - 32px);
+border-radius: 50%;
+z-index: 2;
+}
+
+.Rueda-animada {
+background-color: transparent;
+border-top: 10px solid rgb(188, 202, 66);
+border-right: 10px solid rgb(66, 139, 202);
+border-bottom: 10px solid rgb(202, 66, 129);
+border-left: 10px solid rgba(66, 139, 202, 0.2);
+animation: Rueda-animada 1s linear 0s infinite;
+}
+
+
+@keyframes Rueda-animada {
+0% {
+    transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+}
